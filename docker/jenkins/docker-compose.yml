@@ -10,6 +10,16 @@ services:
       - ./jenkins_home:/var/jenkins_home
     ports:
       - "9000:8080"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 1
+        window: 120s
+      placement:
+        constraints:
+          - node.role == manager
 
 volumes:
   jenkins-home:
