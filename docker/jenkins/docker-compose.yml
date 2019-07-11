@@ -8,6 +8,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ../../..:/var/projects
       - ./jenkins_home:/var/jenkins_home
+      - /mnt/cdn_root:/mnt/cdn_root
     ports:
       - "9000:8080"
     deploy:
