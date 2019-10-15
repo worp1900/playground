@@ -8,7 +8,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ../../..:/var/projects
       - ./jenkins_home:/var/jenkins_home
-      - /mnt/cdn_root:/mnt/cdn_root
+      - /local_swarm_shared_folder:/local_swarm_shared_folder
     ports:
       - "9000:8080"
     deploy:
