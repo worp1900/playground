@@ -1,6 +1,4 @@
-# docker
-
-## nginx-php-fpm
+# nginx-php-fpm
 
 A basic 2 container nginx/php-fpm composition that just works.
 
