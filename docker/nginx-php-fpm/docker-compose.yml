@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+
+  webserver:
+    image: mynamespace/nginx
+    build: ./nginx
+#    entrypoint:
+#      - tail
+#      - -f
+#      - /dev/null
+    depends_on:
+      - application
+    ports:
+      - "80:80"
+    networks:
+      - app
+    
+  application:
+    image: mynamespace/myapp
+    build: ./myApp
+#    entrypoint:
+#      - tail
+#      - -f
+#      - /dev/null
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
