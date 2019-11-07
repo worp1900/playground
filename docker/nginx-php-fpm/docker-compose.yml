@@ -5,6 +5,7 @@ services:
   webserver:
     image: mynamespace/nginx
     build: ./nginx
+# Just for debugging purposes
 #    entrypoint:
 #      - tail
 #      - -f
@@ -19,6 +20,7 @@ services:
   application:
     image: mynamespace/myapp
     build: ./myApp
+# Just for debugging purposes
 #    entrypoint:
 #      - tail
 #      - -f
