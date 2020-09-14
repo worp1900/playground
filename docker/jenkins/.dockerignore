@@ -1,0 +1,4 @@
+.git
+.cache
+jenkins_home*
+tmp_plugins

@@ -1,1 +1,2 @@
-docker/jenkins/jenkins_home
+docker/jenkins/jenkins_home*
+docker/jenkins/tmp_plugins

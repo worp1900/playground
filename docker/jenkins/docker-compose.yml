@@ -3,7 +3,7 @@ version: '3.7'
 services:
   jenkins-local:
     user: root
-    image: jenkinsci/blueocean
+    image: worp/jenkins
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ../../..:/var/projects
@@ -11,6 +11,7 @@ services:
       - /local_swarm_shared_folder:/local_swarm_shared_folder
     ports:
       - "9000:8080"
+      - "50000:50000"
     deploy:
       replicas: 1
       restart_policy:
